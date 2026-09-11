@@ -13,5 +13,6 @@ https://asagami-press.github.io/asagami/<YYYY-MM-DD>/tech.pdf     # テック面
 ```
 
 - 1 面 1 ページ（2160×4320 相当）。見出し・出典は PDF 内リンク。`.webp` は号ページ用（幅1080）、`-thumb.webp` は棚用の軽量画像（幅360）。
-- このリポジトリに入るのは紙面 PDF・紙面画像と索引（index.html / style.css / 号ページ）だけ。生成スクリプト・台帳・下書きは含みません。
+- このリポジトリに入るのは紙面 PDF・紙面画像と索引（index.html / style.css / 号ページ）、明朝の Web フォント（`fonts/`）だけ。生成スクリプト・台帳・下書きは含みません。
+- `fonts/asagami-serif-*.woff2` は [Noto Serif JP](https://fonts.google.com/noto/specimen/Noto+Serif+JP)（© Adobe / Google）を SIL Open Font License 1.1（`fonts/OFL.txt`）の下でサブセット化・改名した物です。ヒラギノ明朝・游明朝の無い端末（Android など）でだけ使われます。
 - 編集・発行: [@medrehaKRSE](https://x.com/medrehaKRSE)

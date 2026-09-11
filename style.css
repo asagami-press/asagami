@@ -1,8 +1,10 @@
+@font-face{font-family:"Asagami Serif";font-style:normal;font-weight:100 500;font-display:swap;src:url(fonts/asagami-serif-400.woff2?v=b6e65800) format("woff2")}
+@font-face{font-family:"Asagami Serif";font-style:normal;font-weight:600 900;font-display:swap;src:url(fonts/asagami-serif-600.woff2?v=5c8ae061) format("woff2")}
 :root{--paper:#f7f3ea;--ink:#17160f;--ink-2:#46443d;--ink-3:#656259;--rule:#17160f;--hair:#bdb8a9;--hair-2:#d9d4c5;
   --med:#0b6e6a;--tech:#2b3f9e;--med-soft:#e3f0ee;--tech-soft:#e6e9f6}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:16px}
-body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP","Noto Serif JP","Asagami Serif",serif;
   line-height:1.6;-webkit-font-smoothing:antialiased;font-feature-settings:"palt"}
 .go{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
 a{color:inherit;text-decoration:none}
