@@ -1,0 +1,101 @@
+:root{--paper:#f7f3ea;--ink:#17160f;--ink-2:#46443d;--ink-3:#75726a;--rule:#17160f;--hair:#bdb8a9;--hair-2:#d9d4c5;
+  --med:#0b6e6a;--tech:#2b3f9e;--med-soft:#e3f0ee;--tech-soft:#e6e9f6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;font-feature-settings:"palt"}
+.go{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:760px;margin:0 auto;padding:22px 16px 40px}
+.rule-double{border-top:3px solid var(--rule);border-bottom:1px solid var(--rule);height:7px}
+.rule{border-top:1.5px solid var(--rule)}
+.rule-thin{border-top:1px solid var(--hair)}
+/* 題字 */
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-bottom:8px}
+.masthead .title{font-size:44px;font-weight:600;line-height:1;letter-spacing:.12em;-webkit-text-stroke:.5px var(--ink)}
+.masthead .title a{display:inline-block}
+.masthead .title-en{font-size:11px;letter-spacing:.38em;color:var(--ink-3);margin:8px 0 0 3px;font-weight:600}
+.masthead .meta{text-align:right;font-size:13px;line-height:1.5;color:var(--ink-2);letter-spacing:.04em;white-space:nowrap}
+.masthead .meta .day{font-size:14px;color:var(--ink)}
+.masthead .meta .ed{display:inline-block;border:1.5px solid var(--ink);padding:1px 7px 1px 9px;letter-spacing:.3em;font-weight:600;
+  color:var(--ink);margin-left:8px;font-size:12px;line-height:1.4}
+/* きょうの紙面（索引行） */
+.index{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;font-size:13px;color:var(--ink-2);padding:6px 0 5px;letter-spacing:.02em}
+.index .lbl{font-weight:600;color:var(--ink);letter-spacing:.12em}
+.index a{color:var(--ink)}
+.index .it::before{content:"▶";font-size:9px;margin-right:5px;vertical-align:2px}
+.index .it.medical::before{color:var(--med)}.index .it.tech::before{color:var(--tech)}
+/* 柱 */
+.kicker{font-size:13px;font-weight:600;letter-spacing:.1em;color:var(--ink-2)}
+.kicker::before{content:"■";margin-right:5px;font-size:11px;vertical-align:2px}
+.medical .kicker,.kicker.medical{color:var(--med)}.tech .kicker,.kicker.tech{color:var(--tech)}
+.medical .accent{color:var(--med)}.tech .accent{color:var(--tech)}
+h1,h2,h3{font-weight:600;-webkit-text-stroke:.4px currentColor;letter-spacing:.01em;line-height:1.35}
+h2.hd{font-size:21px;margin:6px 0 4px}
+h2.hd a,h3.hd a{text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);text-underline-offset:3px}
+.sub{font-size:14px;color:var(--ink-2);line-height:1.5}
+.lead{font-size:14px;color:var(--ink-2);line-height:1.7;margin-top:6px}
+.sec{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:12px 0 8px}
+.sec h2{font-size:15px;letter-spacing:.14em}
+.sec .date{font-size:13px;color:var(--ink-2);letter-spacing:.03em}
+/* 紙面画像 */
+.sheet{display:block;background:#fff;border:1px solid var(--hair);box-shadow:0 1px 2px rgba(23,22,15,.10),0 6px 18px rgba(23,22,15,.10)}
+.sheet img{aspect-ratio:1/2;width:100%;object-fit:cover;object-position:top}
+/* ボタン（出典囲みと同じ意匠） */
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{display:inline-block;border:1px solid color-mix(in srgb,var(--c,var(--ink)) 45%,transparent);color:var(--c,var(--ink));padding:7px 12px;
+  font-size:14px;font-weight:600;letter-spacing:.01em;line-height:1.3}
+.btn::after{content:"↗";font-size:11px;margin-left:5px}
+.btn.in::after{content:"→"}
+.medical .btn{--c:var(--med)}.tech .btn{--c:var(--tech)}
+/* 案A: 紙面棚（最新号は 2 面の画像を横に並べる） */
+.shelf{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;align-items:start}
+.shelf .face{display:flex;flex-direction:column}
+.shelf .sheet{margin-top:8px}
+.shelf h2.hd{font-size:17px;margin-top:10px}
+.shelf .sub{font-size:13px}
+.shelf .btns{margin-top:8px;flex-wrap:nowrap;gap:6px}.shelf .btn{padding:6px 9px;font-size:12px;white-space:nowrap}
+@media(min-width:600px){.shelf{gap:16px 24px}.shelf h2.hd{font-size:20px}.shelf .sub{font-size:14px}}
+/* 案B: 見出し主体（大見出し→リード→小さな紙面） */
+.story{padding:14px 0 16px}
+.story h2.hd{font-size:24px;margin:6px 0 6px}
+.story .row{display:flex;gap:14px;align-items:flex-start;margin-top:12px}
+.story .thumb{flex:0 0 96px}
+.story .thumb img{aspect-ratio:9/10}
+.story .more{flex:1;min-width:0;font-size:14px;color:var(--ink-2)}
+.story .more li{list-style:none;padding:3px 0;border-top:1px solid var(--hair-2);line-height:1.5}
+.story .more li:first-child{border-top:0;padding-top:0}
+.story .more li::before{content:"▶";font-size:9px;margin-right:6px;vertical-align:2px;color:var(--ink-3)}
+.story.medical .more li::before{color:var(--med)}.story.tech .more li::before{color:var(--tech)}
+@media(min-width:600px){.story h2.hd{font-size:28px}.story .thumb{flex-basis:128px}}
+/* 過去号 */
+.month{font-size:13px;font-weight:600;letter-spacing:.12em;color:var(--ink-2);padding:14px 0 4px}
+.month:first-of-type{padding-top:8px}
+.days{list-style:none}
+.days li{border-top:1px solid var(--hair);padding:10px 0}
+.days time{display:block;font-weight:600;font-size:15px;margin-bottom:4px}
+.days time a{text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px}
+.days .eds{display:grid;gap:4px}
+.days .ed{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:baseline;font-size:14px;line-height:1.5}
+.days .ed .kicker{font-size:12px;white-space:nowrap}
+.days .ed .pdf{font-size:12px;font-weight:600;white-space:nowrap;color:var(--ink-3);border:1px solid var(--hair);padding:1px 6px}
+.days .ed.none{color:var(--ink-3)}
+/* 号ページ */
+.issue .face{padding:14px 0 18px}
+.issue .face h2.hd{font-size:22px}
+.issue .sheet{margin-top:12px}
+.issue .sheet img{aspect-ratio:auto;object-fit:contain}
+.issue .toc{list-style:none;margin-top:12px;font-size:14px}
+.issue .toc li{padding:5px 0;border-top:1px solid var(--hair-2);line-height:1.5}
+.issue .toc li::before{content:"▶";font-size:9px;margin-right:6px;vertical-align:2px;color:var(--ink-3)}
+.issue .medical .toc li::before{color:var(--med)}.issue .tech .toc li::before{color:var(--tech)}
+.issue .toc .k{font-size:12px;color:var(--ink-3);margin-right:6px;letter-spacing:.06em}
+.issue .toc a{text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px}
+.nav{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:10px 0}
+.nav a{text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px}
+.nav span{color:var(--ink-3)}
+footer{margin-top:22px;padding-top:10px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:10px;
+  font-size:12px;color:var(--ink-2);letter-spacing:.02em}
+footer .handle{font-weight:600}
+@media(min-width:600px){.masthead .title{font-size:56px}.masthead .meta{font-size:14px}}
