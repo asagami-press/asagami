@@ -1,5 +1,5 @@
-@font-face{font-family:"Asagami Serif";font-style:normal;font-weight:100 500;font-display:swap;src:url(fonts/asagami-serif-400.woff2?v=62cae798) format("woff2")}
-@font-face{font-family:"Asagami Serif";font-style:normal;font-weight:600 900;font-display:swap;src:url(fonts/asagami-serif-600.woff2?v=e0cb74e2) format("woff2")}
+@font-face{font-family:"Asagami Serif";font-style:normal;font-weight:100 500;font-display:swap;src:url(fonts/asagami-serif-400.woff2?v=78749321) format("woff2")}
+@font-face{font-family:"Asagami Serif";font-style:normal;font-weight:600 900;font-display:swap;src:url(fonts/asagami-serif-600.woff2?v=f2755132) format("woff2")}
 :root{--paper:#f7f3ea;--ink:#17160f;--ink-2:#46443d;--ink-3:#656259;--rule:#17160f;--hair:#bdb8a9;--hair-2:#d9d4c5;
   --med:#0b6e6a;--tech:#2b3f9e;--med-soft:#e3f0ee;--tech-soft:#e6e9f6}
 *{box-sizing:border-box;margin:0;padding:0}
